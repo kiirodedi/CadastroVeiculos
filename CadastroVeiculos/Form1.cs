@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace CadastroVeiculos
 {
-    public partial class Form1 : Form
+    public partial class CadastroVeiculo : Form
     {
-        public Form1()
+        public CadastroVeiculo()
         {
             InitializeComponent();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCPF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxCPF_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
