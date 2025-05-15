@@ -31,10 +31,14 @@
             this.labelTitulo = new System.Windows.Forms.Label();
             this.labelModelo = new System.Windows.Forms.Label();
             this.groupBoxVeiculo = new System.Windows.Forms.GroupBox();
+            this.buttonLimparVeiculo = new System.Windows.Forms.Button();
+            this.buttonCarregarVeiculo = new System.Windows.Forms.Button();
+            this.pictureBoxVeiculo = new System.Windows.Forms.PictureBox();
+            this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.comboBoxEstadoVeiculo = new System.Windows.Forms.ComboBox();
             this.comboBoxFabricante = new System.Windows.Forms.ComboBox();
             this.comboBoxAno = new System.Windows.Forms.ComboBox();
-            this.textBoxVeiculo = new System.Windows.Forms.TextBox();
+            this.textBoxCidadeVeiculo = new System.Windows.Forms.TextBox();
             this.textBoxCor = new System.Windows.Forms.TextBox();
             this.textBoxPlaca = new System.Windows.Forms.TextBox();
             this.labelEstado = new System.Windows.Forms.Label();
@@ -43,36 +47,32 @@
             this.labelCor = new System.Windows.Forms.Label();
             this.labelPlaca = new System.Windows.Forms.Label();
             this.labelAno = new System.Windows.Forms.Label();
-            this.textBoxModelo = new System.Windows.Forms.TextBox();
-            this.pictureBoxVeiculo = new System.Windows.Forms.PictureBox();
-            this.buttonCarregarVeiculo = new System.Windows.Forms.Button();
-            this.buttonLimparVeiculo = new System.Windows.Forms.Button();
             this.groupBoxPropriedade = new System.Windows.Forms.GroupBox();
-            this.labelNome = new System.Windows.Forms.Label();
-            this.labelEndereco = new System.Windows.Forms.Label();
-            this.labelBairro = new System.Windows.Forms.Label();
-            this.labelComplemento = new System.Windows.Forms.Label();
-            this.labelCidadeProprietario = new System.Windows.Forms.Label();
-            this.labelRG = new System.Windows.Forms.Label();
-            this.labelEstadoProprietario = new System.Windows.Forms.Label();
-            this.labelCPF = new System.Windows.Forms.Label();
-            this.textBoxNome = new System.Windows.Forms.TextBox();
-            this.textBoxEndereco = new System.Windows.Forms.TextBox();
-            this.textBoxBairro = new System.Windows.Forms.TextBox();
-            this.textBoxComplemento = new System.Windows.Forms.TextBox();
-            this.textBoxCidade = new System.Windows.Forms.TextBox();
-            this.textBoxRG = new System.Windows.Forms.TextBox();
-            this.textBoxCPF = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.labelDataNasc = new System.Windows.Forms.Label();
-            this.dateTimePickerDataNasc = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1Veiculo = new System.Windows.Forms.CheckBox();
-            this.groupBoxSexo = new System.Windows.Forms.GroupBox();
-            this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
-            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
-            this.pictureBoxProprietario = new System.Windows.Forms.PictureBox();
             this.buttonLimparProprietario = new System.Windows.Forms.Button();
+            this.pictureBoxProprietario = new System.Windows.Forms.PictureBox();
             this.buttonCarregarProprietario = new System.Windows.Forms.Button();
+            this.groupBoxSexo = new System.Windows.Forms.GroupBox();
+            this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
+            this.radioButtonMasculino = new System.Windows.Forms.RadioButton();
+            this.checkBox1Veiculo = new System.Windows.Forms.CheckBox();
+            this.dateTimePickerDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.labelDataNasc = new System.Windows.Forms.Label();
+            this.comboBoxEstadoProprietario = new System.Windows.Forms.ComboBox();
+            this.textBoxCPF = new System.Windows.Forms.TextBox();
+            this.textBoxRG = new System.Windows.Forms.TextBox();
+            this.textBoxCidadeProprietario = new System.Windows.Forms.TextBox();
+            this.textBoxComplemento = new System.Windows.Forms.TextBox();
+            this.textBoxBairro = new System.Windows.Forms.TextBox();
+            this.textBoxEndereco = new System.Windows.Forms.TextBox();
+            this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.labelCPF = new System.Windows.Forms.Label();
+            this.labelEstadoProprietario = new System.Windows.Forms.Label();
+            this.labelRG = new System.Windows.Forms.Label();
+            this.labelCidadeProprietario = new System.Windows.Forms.Label();
+            this.labelComplemento = new System.Windows.Forms.Label();
+            this.labelBairro = new System.Windows.Forms.Label();
+            this.labelEndereco = new System.Windows.Forms.Label();
+            this.labelNome = new System.Windows.Forms.Label();
             this.buttonCadastrar = new System.Windows.Forms.Button();
             this.buttonAlterar = new System.Windows.Forms.Button();
             this.buttonConsultar = new System.Windows.Forms.Button();
@@ -82,8 +82,8 @@
             this.groupBoxVeiculo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).BeginInit();
             this.groupBoxPropriedade.SuspendLayout();
-            this.groupBoxSexo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).BeginInit();
+            this.groupBoxSexo.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTitulo
@@ -114,7 +114,7 @@
             this.groupBoxVeiculo.Controls.Add(this.comboBoxEstadoVeiculo);
             this.groupBoxVeiculo.Controls.Add(this.comboBoxFabricante);
             this.groupBoxVeiculo.Controls.Add(this.comboBoxAno);
-            this.groupBoxVeiculo.Controls.Add(this.textBoxVeiculo);
+            this.groupBoxVeiculo.Controls.Add(this.textBoxCidadeVeiculo);
             this.groupBoxVeiculo.Controls.Add(this.textBoxCor);
             this.groupBoxVeiculo.Controls.Add(this.textBoxPlaca);
             this.groupBoxVeiculo.Controls.Add(this.labelEstado);
@@ -132,9 +132,73 @@
             this.groupBoxVeiculo.TabStop = false;
             this.groupBoxVeiculo.Text = "Dados do veículo";
             // 
+            // buttonLimparVeiculo
+            // 
+            this.buttonLimparVeiculo.Location = new System.Drawing.Point(674, 138);
+            this.buttonLimparVeiculo.Name = "buttonLimparVeiculo";
+            this.buttonLimparVeiculo.Size = new System.Drawing.Size(75, 23);
+            this.buttonLimparVeiculo.TabIndex = 15;
+            this.buttonLimparVeiculo.Text = "Limpar";
+            this.buttonLimparVeiculo.UseVisualStyleBackColor = true;
+            this.buttonLimparVeiculo.Click += new System.EventHandler(this.buttonLimparVeiculo_Click);
+            // 
+            // buttonCarregarVeiculo
+            // 
+            this.buttonCarregarVeiculo.Location = new System.Drawing.Point(584, 138);
+            this.buttonCarregarVeiculo.Name = "buttonCarregarVeiculo";
+            this.buttonCarregarVeiculo.Size = new System.Drawing.Size(75, 23);
+            this.buttonCarregarVeiculo.TabIndex = 14;
+            this.buttonCarregarVeiculo.Text = "Carregar";
+            this.buttonCarregarVeiculo.UseVisualStyleBackColor = true;
+            this.buttonCarregarVeiculo.Click += new System.EventHandler(this.buttonCarregarVeiculo_Click);
+            // 
+            // pictureBoxVeiculo
+            // 
+            this.pictureBoxVeiculo.BackColor = System.Drawing.Color.White;
+            this.pictureBoxVeiculo.Location = new System.Drawing.Point(584, 19);
+            this.pictureBoxVeiculo.Name = "pictureBoxVeiculo";
+            this.pictureBoxVeiculo.Size = new System.Drawing.Size(165, 113);
+            this.pictureBoxVeiculo.TabIndex = 13;
+            this.pictureBoxVeiculo.TabStop = false;
+            // 
+            // textBoxModelo
+            // 
+            this.textBoxModelo.Location = new System.Drawing.Point(65, 35);
+            this.textBoxModelo.Name = "textBoxModelo";
+            this.textBoxModelo.Size = new System.Drawing.Size(214, 21);
+            this.textBoxModelo.TabIndex = 12;
+            // 
             // comboBoxEstadoVeiculo
             // 
             this.comboBoxEstadoVeiculo.FormattingEnabled = true;
+            this.comboBoxEstadoVeiculo.Items.AddRange(new object[] {
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
             this.comboBoxEstadoVeiculo.Location = new System.Drawing.Point(259, 131);
             this.comboBoxEstadoVeiculo.Name = "comboBoxEstadoVeiculo";
             this.comboBoxEstadoVeiculo.Size = new System.Drawing.Size(46, 23);
@@ -152,17 +216,43 @@
             // comboBoxAno
             // 
             this.comboBoxAno.FormattingEnabled = true;
+            this.comboBoxAno.Items.AddRange(new object[] {
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
+            "1998",
+            "1999",
+            "2000",
+            "2001",
+            "2002",
+            "2003",
+            "2004",
+            "2005",
+            "2006",
+            "2007",
+            "2008",
+            "2009",
+            "2010",
+            "2011",
+            "2012",
+            "2013",
+            "2014"});
             this.comboBoxAno.Location = new System.Drawing.Point(49, 79);
             this.comboBoxAno.Name = "comboBoxAno";
             this.comboBoxAno.Size = new System.Drawing.Size(84, 23);
             this.comboBoxAno.TabIndex = 9;
             // 
-            // textBoxVeiculo
+            // textBoxCidadeVeiculo
             // 
-            this.textBoxVeiculo.Location = new System.Drawing.Point(384, 128);
-            this.textBoxVeiculo.Name = "textBoxVeiculo";
-            this.textBoxVeiculo.Size = new System.Drawing.Size(173, 21);
-            this.textBoxVeiculo.TabIndex = 8;
+            this.textBoxCidadeVeiculo.Location = new System.Drawing.Point(384, 128);
+            this.textBoxCidadeVeiculo.Name = "textBoxCidadeVeiculo";
+            this.textBoxCidadeVeiculo.Size = new System.Drawing.Size(173, 21);
+            this.textBoxCidadeVeiculo.TabIndex = 8;
             // 
             // textBoxCor
             // 
@@ -232,40 +322,6 @@
             this.labelAno.TabIndex = 2;
             this.labelAno.Text = "Ano";
             // 
-            // textBoxModelo
-            // 
-            this.textBoxModelo.Location = new System.Drawing.Point(65, 35);
-            this.textBoxModelo.Name = "textBoxModelo";
-            this.textBoxModelo.Size = new System.Drawing.Size(214, 21);
-            this.textBoxModelo.TabIndex = 12;
-            // 
-            // pictureBoxVeiculo
-            // 
-            this.pictureBoxVeiculo.BackColor = System.Drawing.Color.White;
-            this.pictureBoxVeiculo.Location = new System.Drawing.Point(584, 19);
-            this.pictureBoxVeiculo.Name = "pictureBoxVeiculo";
-            this.pictureBoxVeiculo.Size = new System.Drawing.Size(165, 113);
-            this.pictureBoxVeiculo.TabIndex = 13;
-            this.pictureBoxVeiculo.TabStop = false;
-            // 
-            // buttonCarregarVeiculo
-            // 
-            this.buttonCarregarVeiculo.Location = new System.Drawing.Point(584, 138);
-            this.buttonCarregarVeiculo.Name = "buttonCarregarVeiculo";
-            this.buttonCarregarVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.buttonCarregarVeiculo.TabIndex = 14;
-            this.buttonCarregarVeiculo.Text = "Carregar";
-            this.buttonCarregarVeiculo.UseVisualStyleBackColor = true;
-            // 
-            // buttonLimparVeiculo
-            // 
-            this.buttonLimparVeiculo.Location = new System.Drawing.Point(674, 138);
-            this.buttonLimparVeiculo.Name = "buttonLimparVeiculo";
-            this.buttonLimparVeiculo.Size = new System.Drawing.Size(75, 23);
-            this.buttonLimparVeiculo.TabIndex = 15;
-            this.buttonLimparVeiculo.Text = "Limpar";
-            this.buttonLimparVeiculo.UseVisualStyleBackColor = true;
-            // 
             // groupBoxPropriedade
             // 
             this.groupBoxPropriedade.Controls.Add(this.buttonLimparProprietario);
@@ -275,10 +331,10 @@
             this.groupBoxPropriedade.Controls.Add(this.checkBox1Veiculo);
             this.groupBoxPropriedade.Controls.Add(this.dateTimePickerDataNasc);
             this.groupBoxPropriedade.Controls.Add(this.labelDataNasc);
-            this.groupBoxPropriedade.Controls.Add(this.comboBox1);
+            this.groupBoxPropriedade.Controls.Add(this.comboBoxEstadoProprietario);
             this.groupBoxPropriedade.Controls.Add(this.textBoxCPF);
             this.groupBoxPropriedade.Controls.Add(this.textBoxRG);
-            this.groupBoxPropriedade.Controls.Add(this.textBoxCidade);
+            this.groupBoxPropriedade.Controls.Add(this.textBoxCidadeProprietario);
             this.groupBoxPropriedade.Controls.Add(this.textBoxComplemento);
             this.groupBoxPropriedade.Controls.Add(this.textBoxBairro);
             this.groupBoxPropriedade.Controls.Add(this.textBoxEndereco);
@@ -299,162 +355,34 @@
             this.groupBoxPropriedade.TabStop = false;
             this.groupBoxPropriedade.Text = "Cadastro de proprietário";
             // 
-            // labelNome
+            // buttonLimparProprietario
             // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(17, 32);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(41, 15);
-            this.labelNome.TabIndex = 16;
-            this.labelNome.Text = "Nome";
+            this.buttonLimparProprietario.Location = new System.Drawing.Point(674, 176);
+            this.buttonLimparProprietario.Name = "buttonLimparProprietario";
+            this.buttonLimparProprietario.Size = new System.Drawing.Size(75, 23);
+            this.buttonLimparProprietario.TabIndex = 17;
+            this.buttonLimparProprietario.Text = "Limpar";
+            this.buttonLimparProprietario.UseVisualStyleBackColor = true;
+            this.buttonLimparProprietario.Click += new System.EventHandler(this.buttonLimparProprietario_Click);
             // 
-            // labelEndereco
+            // pictureBoxProprietario
             // 
-            this.labelEndereco.AutoSize = true;
-            this.labelEndereco.Location = new System.Drawing.Point(18, 61);
-            this.labelEndereco.Name = "labelEndereco";
-            this.labelEndereco.Size = new System.Drawing.Size(60, 15);
-            this.labelEndereco.TabIndex = 17;
-            this.labelEndereco.Text = "Endereço";
+            this.pictureBoxProprietario.BackColor = System.Drawing.Color.White;
+            this.pictureBoxProprietario.Location = new System.Drawing.Point(593, 20);
+            this.pictureBoxProprietario.Name = "pictureBoxProprietario";
+            this.pictureBoxProprietario.Size = new System.Drawing.Size(156, 150);
+            this.pictureBoxProprietario.TabIndex = 16;
+            this.pictureBoxProprietario.TabStop = false;
             // 
-            // labelBairro
+            // buttonCarregarProprietario
             // 
-            this.labelBairro.AutoSize = true;
-            this.labelBairro.Location = new System.Drawing.Point(17, 91);
-            this.labelBairro.Name = "labelBairro";
-            this.labelBairro.Size = new System.Drawing.Size(40, 15);
-            this.labelBairro.TabIndex = 18;
-            this.labelBairro.Text = "Bairro";
-            // 
-            // labelComplemento
-            // 
-            this.labelComplemento.AutoSize = true;
-            this.labelComplemento.Location = new System.Drawing.Point(17, 124);
-            this.labelComplemento.Name = "labelComplemento";
-            this.labelComplemento.Size = new System.Drawing.Size(85, 15);
-            this.labelComplemento.TabIndex = 19;
-            this.labelComplemento.Text = "Complemento";
-            // 
-            // labelCidadeProprietario
-            // 
-            this.labelCidadeProprietario.AutoSize = true;
-            this.labelCidadeProprietario.Location = new System.Drawing.Point(17, 151);
-            this.labelCidadeProprietario.Name = "labelCidadeProprietario";
-            this.labelCidadeProprietario.Size = new System.Drawing.Size(46, 15);
-            this.labelCidadeProprietario.TabIndex = 20;
-            this.labelCidadeProprietario.Text = "Cidade";
-            // 
-            // labelRG
-            // 
-            this.labelRG.AutoSize = true;
-            this.labelRG.Location = new System.Drawing.Point(17, 179);
-            this.labelRG.Name = "labelRG";
-            this.labelRG.Size = new System.Drawing.Size(25, 15);
-            this.labelRG.TabIndex = 21;
-            this.labelRG.Text = "RG";
-            // 
-            // labelEstadoProprietario
-            // 
-            this.labelEstadoProprietario.AutoSize = true;
-            this.labelEstadoProprietario.Location = new System.Drawing.Point(331, 155);
-            this.labelEstadoProprietario.Name = "labelEstadoProprietario";
-            this.labelEstadoProprietario.Size = new System.Drawing.Size(45, 15);
-            this.labelEstadoProprietario.TabIndex = 22;
-            this.labelEstadoProprietario.Text = "Estado";
-            // 
-            // labelCPF
-            // 
-            this.labelCPF.AutoSize = true;
-            this.labelCPF.Location = new System.Drawing.Point(228, 181);
-            this.labelCPF.Name = "labelCPF";
-            this.labelCPF.Size = new System.Drawing.Size(30, 15);
-            this.labelCPF.TabIndex = 23;
-            this.labelCPF.Text = "CPF";
-            this.labelCPF.Click += new System.EventHandler(this.labelCPF_Click);
-            // 
-            // textBoxNome
-            // 
-            this.textBoxNome.Location = new System.Drawing.Point(64, 32);
-            this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(368, 21);
-            this.textBoxNome.TabIndex = 16;
-            // 
-            // textBoxEndereco
-            // 
-            this.textBoxEndereco.Location = new System.Drawing.Point(84, 61);
-            this.textBoxEndereco.Name = "textBoxEndereco";
-            this.textBoxEndereco.Size = new System.Drawing.Size(348, 21);
-            this.textBoxEndereco.TabIndex = 24;
-            // 
-            // textBoxBairro
-            // 
-            this.textBoxBairro.Location = new System.Drawing.Point(63, 91);
-            this.textBoxBairro.Name = "textBoxBairro";
-            this.textBoxBairro.Size = new System.Drawing.Size(369, 21);
-            this.textBoxBairro.TabIndex = 25;
-            // 
-            // textBoxComplemento
-            // 
-            this.textBoxComplemento.Location = new System.Drawing.Point(108, 124);
-            this.textBoxComplemento.Name = "textBoxComplemento";
-            this.textBoxComplemento.Size = new System.Drawing.Size(324, 21);
-            this.textBoxComplemento.TabIndex = 26;
-            // 
-            // textBoxCidade
-            // 
-            this.textBoxCidade.Location = new System.Drawing.Point(69, 151);
-            this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(236, 21);
-            this.textBoxCidade.TabIndex = 27;
-            // 
-            // textBoxRG
-            // 
-            this.textBoxRG.Location = new System.Drawing.Point(48, 178);
-            this.textBoxRG.Name = "textBoxRG";
-            this.textBoxRG.Size = new System.Drawing.Size(148, 21);
-            this.textBoxRG.TabIndex = 28;
-            // 
-            // textBoxCPF
-            // 
-            this.textBoxCPF.Location = new System.Drawing.Point(264, 178);
-            this.textBoxCPF.Name = "textBoxCPF";
-            this.textBoxCPF.Size = new System.Drawing.Size(168, 21);
-            this.textBoxCPF.TabIndex = 29;
-            this.textBoxCPF.TextChanged += new System.EventHandler(this.textBoxCPF_TextChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(386, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(46, 23);
-            this.comboBox1.TabIndex = 16;
-            // 
-            // labelDataNasc
-            // 
-            this.labelDataNasc.AutoSize = true;
-            this.labelDataNasc.Location = new System.Drawing.Point(445, 32);
-            this.labelDataNasc.Name = "labelDataNasc";
-            this.labelDataNasc.Size = new System.Drawing.Size(119, 15);
-            this.labelDataNasc.TabIndex = 16;
-            this.labelDataNasc.Text = "Data de Nascimento";
-            // 
-            // dateTimePickerDataNasc
-            // 
-            this.dateTimePickerDataNasc.Location = new System.Drawing.Point(448, 50);
-            this.dateTimePickerDataNasc.Name = "dateTimePickerDataNasc";
-            this.dateTimePickerDataNasc.Size = new System.Drawing.Size(116, 21);
-            this.dateTimePickerDataNasc.TabIndex = 30;
-            // 
-            // checkBox1Veiculo
-            // 
-            this.checkBox1Veiculo.AutoSize = true;
-            this.checkBox1Veiculo.Location = new System.Drawing.Point(466, 87);
-            this.checkBox1Veiculo.Name = "checkBox1Veiculo";
-            this.checkBox1Veiculo.Size = new System.Drawing.Size(81, 19);
-            this.checkBox1Veiculo.TabIndex = 31;
-            this.checkBox1Veiculo.Text = "1° Veículo";
-            this.checkBox1Veiculo.UseVisualStyleBackColor = true;
+            this.buttonCarregarProprietario.Location = new System.Drawing.Point(593, 176);
+            this.buttonCarregarProprietario.Name = "buttonCarregarProprietario";
+            this.buttonCarregarProprietario.Size = new System.Drawing.Size(75, 23);
+            this.buttonCarregarProprietario.TabIndex = 16;
+            this.buttonCarregarProprietario.Text = "Carregar";
+            this.buttonCarregarProprietario.UseVisualStyleBackColor = true;
+            this.buttonCarregarProprietario.Click += new System.EventHandler(this.buttonCarregarProprietario_Click);
             // 
             // groupBoxSexo
             // 
@@ -467,17 +395,6 @@
             this.groupBoxSexo.TabStop = false;
             this.groupBoxSexo.Text = "Sexo";
             // 
-            // radioButtonMasculino
-            // 
-            this.radioButtonMasculino.AutoSize = true;
-            this.radioButtonMasculino.Location = new System.Drawing.Point(17, 20);
-            this.radioButtonMasculino.Name = "radioButtonMasculino";
-            this.radioButtonMasculino.Size = new System.Drawing.Size(82, 19);
-            this.radioButtonMasculino.TabIndex = 0;
-            this.radioButtonMasculino.TabStop = true;
-            this.radioButtonMasculino.Text = "Masculino";
-            this.radioButtonMasculino.UseVisualStyleBackColor = true;
-            // 
             // radioButtonFeminino
             // 
             this.radioButtonFeminino.AutoSize = true;
@@ -489,32 +406,201 @@
             this.radioButtonFeminino.Text = "Feminino";
             this.radioButtonFeminino.UseVisualStyleBackColor = true;
             // 
-            // pictureBoxProprietario
+            // radioButtonMasculino
             // 
-            this.pictureBoxProprietario.BackColor = System.Drawing.Color.White;
-            this.pictureBoxProprietario.Location = new System.Drawing.Point(593, 20);
-            this.pictureBoxProprietario.Name = "pictureBoxProprietario";
-            this.pictureBoxProprietario.Size = new System.Drawing.Size(156, 150);
-            this.pictureBoxProprietario.TabIndex = 16;
-            this.pictureBoxProprietario.TabStop = false;
+            this.radioButtonMasculino.AutoSize = true;
+            this.radioButtonMasculino.Location = new System.Drawing.Point(17, 20);
+            this.radioButtonMasculino.Name = "radioButtonMasculino";
+            this.radioButtonMasculino.Size = new System.Drawing.Size(82, 19);
+            this.radioButtonMasculino.TabIndex = 0;
+            this.radioButtonMasculino.TabStop = true;
+            this.radioButtonMasculino.Text = "Masculino";
+            this.radioButtonMasculino.UseVisualStyleBackColor = true;
             // 
-            // buttonLimparProprietario
+            // checkBox1Veiculo
             // 
-            this.buttonLimparProprietario.Location = new System.Drawing.Point(674, 176);
-            this.buttonLimparProprietario.Name = "buttonLimparProprietario";
-            this.buttonLimparProprietario.Size = new System.Drawing.Size(75, 23);
-            this.buttonLimparProprietario.TabIndex = 17;
-            this.buttonLimparProprietario.Text = "Limpar";
-            this.buttonLimparProprietario.UseVisualStyleBackColor = true;
+            this.checkBox1Veiculo.AutoSize = true;
+            this.checkBox1Veiculo.Location = new System.Drawing.Point(466, 87);
+            this.checkBox1Veiculo.Name = "checkBox1Veiculo";
+            this.checkBox1Veiculo.Size = new System.Drawing.Size(81, 19);
+            this.checkBox1Veiculo.TabIndex = 31;
+            this.checkBox1Veiculo.Text = "1° Veículo";
+            this.checkBox1Veiculo.UseVisualStyleBackColor = true;
             // 
-            // buttonCarregarProprietario
+            // dateTimePickerDataNasc
             // 
-            this.buttonCarregarProprietario.Location = new System.Drawing.Point(593, 176);
-            this.buttonCarregarProprietario.Name = "buttonCarregarProprietario";
-            this.buttonCarregarProprietario.Size = new System.Drawing.Size(75, 23);
-            this.buttonCarregarProprietario.TabIndex = 16;
-            this.buttonCarregarProprietario.Text = "Carregar";
-            this.buttonCarregarProprietario.UseVisualStyleBackColor = true;
+            this.dateTimePickerDataNasc.Location = new System.Drawing.Point(448, 50);
+            this.dateTimePickerDataNasc.Name = "dateTimePickerDataNasc";
+            this.dateTimePickerDataNasc.Size = new System.Drawing.Size(116, 21);
+            this.dateTimePickerDataNasc.TabIndex = 30;
+            // 
+            // labelDataNasc
+            // 
+            this.labelDataNasc.AutoSize = true;
+            this.labelDataNasc.Location = new System.Drawing.Point(445, 32);
+            this.labelDataNasc.Name = "labelDataNasc";
+            this.labelDataNasc.Size = new System.Drawing.Size(119, 15);
+            this.labelDataNasc.TabIndex = 16;
+            this.labelDataNasc.Text = "Data de Nascimento";
+            // 
+            // comboBoxEstadoProprietario
+            // 
+            this.comboBoxEstadoProprietario.FormattingEnabled = true;
+            this.comboBoxEstadoProprietario.Items.AddRange(new object[] {
+            "Alfa Romeo",
+            "Audi",
+            "BMW",
+            "Cross Lander",
+            "Citroën",
+            "DaimlerChrysler",
+            "Ferrari",
+            "Fiat",
+            "Ford",
+            "General Motors",
+            "Honda",
+            "Hyundai",
+            "Jaguar",
+            "Kia",
+            "Land Rover",
+            "Mitsubishi",
+            "Nissan",
+            "Peugeot",
+            "Porsche",
+            "Renault",
+            "Seat",
+            "SsangYong",
+            "Subaru",
+            "Toyota",
+            "Troller",
+            "Volkswagen",
+            "Volvo"});
+            this.comboBoxEstadoProprietario.Location = new System.Drawing.Point(386, 153);
+            this.comboBoxEstadoProprietario.Name = "comboBoxEstadoProprietario";
+            this.comboBoxEstadoProprietario.Size = new System.Drawing.Size(46, 23);
+            this.comboBoxEstadoProprietario.TabIndex = 16;
+            // 
+            // textBoxCPF
+            // 
+            this.textBoxCPF.Location = new System.Drawing.Point(264, 178);
+            this.textBoxCPF.Name = "textBoxCPF";
+            this.textBoxCPF.Size = new System.Drawing.Size(168, 21);
+            this.textBoxCPF.TabIndex = 29;
+            this.textBoxCPF.TextChanged += new System.EventHandler(this.textBoxCPF_TextChanged);
+            // 
+            // textBoxRG
+            // 
+            this.textBoxRG.Location = new System.Drawing.Point(48, 178);
+            this.textBoxRG.Name = "textBoxRG";
+            this.textBoxRG.Size = new System.Drawing.Size(148, 21);
+            this.textBoxRG.TabIndex = 28;
+            // 
+            // textBoxCidadeProprietario
+            // 
+            this.textBoxCidadeProprietario.Location = new System.Drawing.Point(69, 151);
+            this.textBoxCidadeProprietario.Name = "textBoxCidadeProprietario";
+            this.textBoxCidadeProprietario.Size = new System.Drawing.Size(236, 21);
+            this.textBoxCidadeProprietario.TabIndex = 27;
+            // 
+            // textBoxComplemento
+            // 
+            this.textBoxComplemento.Location = new System.Drawing.Point(108, 124);
+            this.textBoxComplemento.Name = "textBoxComplemento";
+            this.textBoxComplemento.Size = new System.Drawing.Size(324, 21);
+            this.textBoxComplemento.TabIndex = 26;
+            // 
+            // textBoxBairro
+            // 
+            this.textBoxBairro.Location = new System.Drawing.Point(63, 91);
+            this.textBoxBairro.Name = "textBoxBairro";
+            this.textBoxBairro.Size = new System.Drawing.Size(369, 21);
+            this.textBoxBairro.TabIndex = 25;
+            // 
+            // textBoxEndereco
+            // 
+            this.textBoxEndereco.Location = new System.Drawing.Point(84, 61);
+            this.textBoxEndereco.Name = "textBoxEndereco";
+            this.textBoxEndereco.Size = new System.Drawing.Size(348, 21);
+            this.textBoxEndereco.TabIndex = 24;
+            // 
+            // textBoxNome
+            // 
+            this.textBoxNome.Location = new System.Drawing.Point(64, 32);
+            this.textBoxNome.Name = "textBoxNome";
+            this.textBoxNome.Size = new System.Drawing.Size(368, 21);
+            this.textBoxNome.TabIndex = 16;
+            // 
+            // labelCPF
+            // 
+            this.labelCPF.AutoSize = true;
+            this.labelCPF.Location = new System.Drawing.Point(228, 181);
+            this.labelCPF.Name = "labelCPF";
+            this.labelCPF.Size = new System.Drawing.Size(30, 15);
+            this.labelCPF.TabIndex = 23;
+            this.labelCPF.Text = "CPF";
+            this.labelCPF.Click += new System.EventHandler(this.labelCPF_Click);
+            // 
+            // labelEstadoProprietario
+            // 
+            this.labelEstadoProprietario.AutoSize = true;
+            this.labelEstadoProprietario.Location = new System.Drawing.Point(331, 155);
+            this.labelEstadoProprietario.Name = "labelEstadoProprietario";
+            this.labelEstadoProprietario.Size = new System.Drawing.Size(45, 15);
+            this.labelEstadoProprietario.TabIndex = 22;
+            this.labelEstadoProprietario.Text = "Estado";
+            // 
+            // labelRG
+            // 
+            this.labelRG.AutoSize = true;
+            this.labelRG.Location = new System.Drawing.Point(17, 179);
+            this.labelRG.Name = "labelRG";
+            this.labelRG.Size = new System.Drawing.Size(25, 15);
+            this.labelRG.TabIndex = 21;
+            this.labelRG.Text = "RG";
+            // 
+            // labelCidadeProprietario
+            // 
+            this.labelCidadeProprietario.AutoSize = true;
+            this.labelCidadeProprietario.Location = new System.Drawing.Point(17, 151);
+            this.labelCidadeProprietario.Name = "labelCidadeProprietario";
+            this.labelCidadeProprietario.Size = new System.Drawing.Size(46, 15);
+            this.labelCidadeProprietario.TabIndex = 20;
+            this.labelCidadeProprietario.Text = "Cidade";
+            // 
+            // labelComplemento
+            // 
+            this.labelComplemento.AutoSize = true;
+            this.labelComplemento.Location = new System.Drawing.Point(17, 124);
+            this.labelComplemento.Name = "labelComplemento";
+            this.labelComplemento.Size = new System.Drawing.Size(85, 15);
+            this.labelComplemento.TabIndex = 19;
+            this.labelComplemento.Text = "Complemento";
+            // 
+            // labelBairro
+            // 
+            this.labelBairro.AutoSize = true;
+            this.labelBairro.Location = new System.Drawing.Point(17, 91);
+            this.labelBairro.Name = "labelBairro";
+            this.labelBairro.Size = new System.Drawing.Size(40, 15);
+            this.labelBairro.TabIndex = 18;
+            this.labelBairro.Text = "Bairro";
+            // 
+            // labelEndereco
+            // 
+            this.labelEndereco.AutoSize = true;
+            this.labelEndereco.Location = new System.Drawing.Point(18, 61);
+            this.labelEndereco.Name = "labelEndereco";
+            this.labelEndereco.Size = new System.Drawing.Size(60, 15);
+            this.labelEndereco.TabIndex = 17;
+            this.labelEndereco.Text = "Endereço";
+            // 
+            // labelNome
+            // 
+            this.labelNome.AutoSize = true;
+            this.labelNome.Location = new System.Drawing.Point(17, 32);
+            this.labelNome.Name = "labelNome";
+            this.labelNome.Size = new System.Drawing.Size(41, 15);
+            this.labelNome.TabIndex = 16;
+            this.labelNome.Text = "Nome";
             // 
             // buttonCadastrar
             // 
@@ -524,6 +610,7 @@
             this.buttonCadastrar.TabIndex = 16;
             this.buttonCadastrar.Text = "Cadastrar";
             this.buttonCadastrar.UseVisualStyleBackColor = true;
+            this.buttonCadastrar.Click += new System.EventHandler(this.buttonCadastrar_Click);
             // 
             // buttonAlterar
             // 
@@ -591,9 +678,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).EndInit();
             this.groupBoxPropriedade.ResumeLayout(false);
             this.groupBoxPropriedade.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).EndInit();
             this.groupBoxSexo.ResumeLayout(false);
             this.groupBoxSexo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,7 +696,7 @@
         private System.Windows.Forms.ComboBox comboBoxEstadoVeiculo;
         private System.Windows.Forms.ComboBox comboBoxFabricante;
         private System.Windows.Forms.ComboBox comboBoxAno;
-        private System.Windows.Forms.TextBox textBoxVeiculo;
+        private System.Windows.Forms.TextBox textBoxCidadeVeiculo;
         private System.Windows.Forms.TextBox textBoxCor;
         private System.Windows.Forms.TextBox textBoxPlaca;
         private System.Windows.Forms.Label labelEstado;
@@ -628,10 +715,10 @@
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.Label labelEstadoProprietario;
         private System.Windows.Forms.Label labelRG;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxEstadoProprietario;
         private System.Windows.Forms.TextBox textBoxCPF;
         private System.Windows.Forms.TextBox textBoxRG;
-        private System.Windows.Forms.TextBox textBoxCidade;
+        private System.Windows.Forms.TextBox textBoxCidadeProprietario;
         private System.Windows.Forms.TextBox textBoxComplemento;
         private System.Windows.Forms.TextBox textBoxBairro;
         private System.Windows.Forms.TextBox textBoxEndereco;

@@ -1,0 +1,10 @@
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\bin\Debug\CadastroVeiculos.exe.config
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\bin\Debug\CadastroVeiculos.exe
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\bin\Debug\CadastroVeiculos.pdb
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.csproj.AssemblyReference.cache
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.CadastroVeiculo.resources
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.Properties.Resources.resources
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.csproj.GenerateResource.cache
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.csproj.CoreCompileInputs.cache
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.exe
+C:\Users\dedim\source\repos\CadastroVeiculos\CadastroVeiculos\obj\Debug\CadastroVeiculos.pdb
