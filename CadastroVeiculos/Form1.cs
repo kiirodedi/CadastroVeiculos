@@ -15,8 +15,6 @@ namespace CadastroVeiculos
     public partial class CadastroVeiculo : Form
 
     {
-
-        private bool cadastroRealizado = false;
         public CadastroVeiculo()
         {
             InitializeComponent();
@@ -245,7 +243,6 @@ namespace CadastroVeiculos
             }
 
             MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            cadastroRealizado = true;
         }
 
         private void buttonAlterar_Click(object sender, EventArgs e)
@@ -341,6 +338,49 @@ namespace CadastroVeiculos
 
                 MessageBox.Show("Todos os itens foram excluídos com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }   
+        }
+
+        private void buttonLimpar_Click(object sender, EventArgs e)
+        {
+            // Dados do veículo
+
+            // textBox
+            textBoxModelo.Clear();
+            textBoxPlaca.Clear();
+            textBoxCor.Clear();
+            textBoxCidadeVeiculo.Clear();
+            //comboBox
+            comboBoxFabricante.SelectedIndex = -1;
+            comboBoxAno.SelectedIndex = -1;
+            comboBoxEstadoVeiculo.SelectedIndex = -1;
+
+            // Dados do proprietário
+
+            // textBox
+            textBoxNome.Clear();
+            textBoxEndereco.Clear();
+            textBoxBairro.Clear();
+            textBoxCidadeProprietario.Clear();
+            textBoxComplemento.Clear();
+            textBoxRG.Clear();
+            textBoxCPF.Clear();
+            // comboBox
+            comboBoxEstadoProprietario.SelectedIndex = -1;
+            // dateTimePicker
+            dateTimePickerDataNasc.Value = DateTime.Now;
+            // checkBox
+            checkBox1Veiculo.Checked = false;
+            // radioButton
+            radioButtonMasculino.Checked = false;
+            radioButtonFeminino.Checked = false;
+            // pictureBox
+            pictureBoxProprietario.Image = null;
+            pictureBoxVeiculo.Image = null;
+        }
+
+        private void buttonSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

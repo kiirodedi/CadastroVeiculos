@@ -650,6 +650,7 @@
             this.buttonLimpar.TabIndex = 20;
             this.buttonLimpar.Text = "Limpar";
             this.buttonLimpar.UseVisualStyleBackColor = true;
+            this.buttonLimpar.Click += new System.EventHandler(this.buttonLimpar_Click);
             // 
             // buttonSair
             // 
@@ -659,6 +660,7 @@
             this.buttonSair.TabIndex = 21;
             this.buttonSair.Text = "Sair";
             this.buttonSair.UseVisualStyleBackColor = true;
+            this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
             // CadastroVeiculo
             // 
