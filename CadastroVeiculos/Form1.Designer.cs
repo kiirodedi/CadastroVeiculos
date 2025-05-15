@@ -33,7 +33,6 @@
             this.groupBoxVeiculo = new System.Windows.Forms.GroupBox();
             this.buttonLimparVeiculo = new System.Windows.Forms.Button();
             this.buttonCarregarVeiculo = new System.Windows.Forms.Button();
-            this.pictureBoxVeiculo = new System.Windows.Forms.PictureBox();
             this.textBoxModelo = new System.Windows.Forms.TextBox();
             this.comboBoxEstadoVeiculo = new System.Windows.Forms.ComboBox();
             this.comboBoxFabricante = new System.Windows.Forms.ComboBox();
@@ -49,7 +48,6 @@
             this.labelAno = new System.Windows.Forms.Label();
             this.groupBoxPropriedade = new System.Windows.Forms.GroupBox();
             this.buttonLimparProprietario = new System.Windows.Forms.Button();
-            this.pictureBoxProprietario = new System.Windows.Forms.PictureBox();
             this.buttonCarregarProprietario = new System.Windows.Forms.Button();
             this.groupBoxSexo = new System.Windows.Forms.GroupBox();
             this.radioButtonFeminino = new System.Windows.Forms.RadioButton();
@@ -79,11 +77,13 @@
             this.buttonExcluir = new System.Windows.Forms.Button();
             this.buttonLimpar = new System.Windows.Forms.Button();
             this.buttonSair = new System.Windows.Forms.Button();
+            this.pictureBoxProprietario = new System.Windows.Forms.PictureBox();
+            this.pictureBoxVeiculo = new System.Windows.Forms.PictureBox();
             this.groupBoxVeiculo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).BeginInit();
             this.groupBoxPropriedade.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).BeginInit();
             this.groupBoxSexo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTitulo
@@ -151,15 +151,6 @@
             this.buttonCarregarVeiculo.Text = "Carregar";
             this.buttonCarregarVeiculo.UseVisualStyleBackColor = true;
             this.buttonCarregarVeiculo.Click += new System.EventHandler(this.buttonCarregarVeiculo_Click);
-            // 
-            // pictureBoxVeiculo
-            // 
-            this.pictureBoxVeiculo.BackColor = System.Drawing.Color.White;
-            this.pictureBoxVeiculo.Location = new System.Drawing.Point(584, 19);
-            this.pictureBoxVeiculo.Name = "pictureBoxVeiculo";
-            this.pictureBoxVeiculo.Size = new System.Drawing.Size(165, 113);
-            this.pictureBoxVeiculo.TabIndex = 13;
-            this.pictureBoxVeiculo.TabStop = false;
             // 
             // textBoxModelo
             // 
@@ -364,15 +355,6 @@
             this.buttonLimparProprietario.Text = "Limpar";
             this.buttonLimparProprietario.UseVisualStyleBackColor = true;
             this.buttonLimparProprietario.Click += new System.EventHandler(this.buttonLimparProprietario_Click);
-            // 
-            // pictureBoxProprietario
-            // 
-            this.pictureBoxProprietario.BackColor = System.Drawing.Color.White;
-            this.pictureBoxProprietario.Location = new System.Drawing.Point(593, 20);
-            this.pictureBoxProprietario.Name = "pictureBoxProprietario";
-            this.pictureBoxProprietario.Size = new System.Drawing.Size(156, 150);
-            this.pictureBoxProprietario.TabIndex = 16;
-            this.pictureBoxProprietario.TabStop = false;
             // 
             // buttonCarregarProprietario
             // 
@@ -662,6 +644,30 @@
             this.buttonSair.UseVisualStyleBackColor = true;
             this.buttonSair.Click += new System.EventHandler(this.buttonSair_Click);
             // 
+            // pictureBoxProprietario
+            // 
+            this.pictureBoxProprietario.BackColor = System.Drawing.Color.White;
+            this.pictureBoxProprietario.BackgroundImage = global::CadastroVeiculos.Properties.Resources.proprietarioNull;
+            this.pictureBoxProprietario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxProprietario.Location = new System.Drawing.Point(593, 20);
+            this.pictureBoxProprietario.Name = "pictureBoxProprietario";
+            this.pictureBoxProprietario.Size = new System.Drawing.Size(156, 150);
+            this.pictureBoxProprietario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxProprietario.TabIndex = 16;
+            this.pictureBoxProprietario.TabStop = false;
+            // 
+            // pictureBoxVeiculo
+            // 
+            this.pictureBoxVeiculo.BackColor = System.Drawing.Color.White;
+            this.pictureBoxVeiculo.BackgroundImage = global::CadastroVeiculos.Properties.Resources.veiculoNull;
+            this.pictureBoxVeiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxVeiculo.Location = new System.Drawing.Point(584, 19);
+            this.pictureBoxVeiculo.Name = "pictureBoxVeiculo";
+            this.pictureBoxVeiculo.Size = new System.Drawing.Size(165, 113);
+            this.pictureBoxVeiculo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxVeiculo.TabIndex = 13;
+            this.pictureBoxVeiculo.TabStop = false;
+            // 
             // CadastroVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -680,12 +686,12 @@
             this.Text = "Form1";
             this.groupBoxVeiculo.ResumeLayout(false);
             this.groupBoxVeiculo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).EndInit();
             this.groupBoxPropriedade.ResumeLayout(false);
             this.groupBoxPropriedade.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).EndInit();
             this.groupBoxSexo.ResumeLayout(false);
             this.groupBoxSexo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProprietario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVeiculo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
