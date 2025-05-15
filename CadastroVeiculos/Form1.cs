@@ -298,5 +298,49 @@ namespace CadastroVeiculos
                 $"Data de Nascimento: {dataNascimento}\n" +
                 $"Sexo: {sexo}", "Consulta");
         }
+
+        private void buttonExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult resultadoExcluir = MessageBox.Show("Tem certeza que deseja excluir todas as informações?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (resultadoExcluir == DialogResult.Yes)
+            {
+                // Dados do veículo
+
+                // textBox
+                textBoxModelo.Clear();
+                textBoxPlaca.Clear();
+                textBoxCor.Clear();
+                textBoxCidadeVeiculo.Clear();
+                //comboBox
+                comboBoxFabricante.SelectedIndex = -1;
+                comboBoxAno.SelectedIndex = -1;
+                comboBoxEstadoVeiculo.SelectedIndex = -1;
+
+                // Dados do proprietário
+
+                // textBox
+                textBoxNome.Clear();
+                textBoxEndereco.Clear();
+                textBoxBairro.Clear();
+                textBoxCidadeProprietario.Clear();
+                textBoxComplemento.Clear();
+                textBoxRG.Clear();
+                textBoxCPF.Clear();
+                // comboBox
+                comboBoxEstadoProprietario.SelectedIndex = -1;
+                // dateTimePicker
+                dateTimePickerDataNasc.Value = DateTime.Now;
+                // checkBox
+                checkBox1Veiculo.Checked = false;
+                // radioButton
+                radioButtonMasculino.Checked = false;
+                radioButtonFeminino.Checked = false;
+                // pictureBox
+                pictureBoxProprietario.Image = null;
+                pictureBoxVeiculo.Image = null;
+
+                MessageBox.Show("Todos os itens foram excluídos com sucesso", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }   
     }
 }
