@@ -620,6 +620,7 @@
             this.buttonAlterar.TabIndex = 17;
             this.buttonAlterar.Text = "Alterar";
             this.buttonAlterar.UseVisualStyleBackColor = true;
+            this.buttonAlterar.Click += new System.EventHandler(this.buttonAlterar_Click);
             // 
             // buttonConsultar
             // 
@@ -629,6 +630,7 @@
             this.buttonConsultar.TabIndex = 18;
             this.buttonConsultar.Text = "Consultar";
             this.buttonConsultar.UseVisualStyleBackColor = true;
+            this.buttonConsultar.Click += new System.EventHandler(this.buttonConsultar_Click);
             // 
             // buttonExcluir
             // 

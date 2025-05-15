@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -244,6 +246,57 @@ namespace CadastroVeiculos
 
             MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             cadastroRealizado = true;
+        }
+
+        private void buttonAlterar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Todas as alterações foram feitas com sucesso!", "Alteração", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
+        }
+
+        private void buttonConsultar_Click(object sender, EventArgs e)
+        {
+            // Veículo
+            string modelo = textBoxModelo.Text;
+            string ano = comboBoxAno.SelectedItem.ToString();
+            string placa = textBoxPlaca.Text;
+            string fabricante = comboBoxFabricante.SelectedItem.ToString();
+            string cor = textBoxCor.Text;
+            string estadoVeiculo = comboBoxEstadoVeiculo.SelectedItem.ToString();
+            string cidadeVeiculo = textBoxCidadeVeiculo.Text;
+
+            // Proprietário
+            string nome = textBoxNome.Text;
+            string endereco = textBoxEndereco.Text;
+            string bairro = textBoxBairro.Text;
+            string complemento = textBoxComplemento.Text;
+            string cidadeProprietario = textBoxCidadeProprietario.Text;
+            string rg = textBoxRG.Text;
+            string estadoProprietario = comboBoxEstadoProprietario.SelectedItem.ToString();
+            string cpf = textBoxCPF.Text;
+            string dataNascimento = dateTimePickerDataNasc.Value.ToString("dd/MM/yyyy");
+            string sexo = radioButtonMasculino.Checked ? "Masculino" : "Feminino";
+
+            MessageBox.Show($"-- Dados do Veículo --\n" +
+                $"Modelo: {modelo}\n" +
+                $"Ano: {ano}\n" +
+                $"Placa: {placa}\n" +
+                $"Fabricante: {fabricante}\n" +
+                $"Cor: {cor}\n" +
+                $"Estado: {estadoVeiculo}\n" +
+                $"Cidade: {cidadeVeiculo}\n" +
+                $"\n" +
+                $"-- Dados do Proprietário --\n" +
+                $"Nome: {nome}\n" +
+                $"Endereço: {endereco}\n" +
+                $"Bairro: {bairro}\n" +
+                $"Complemento: {complemento}\n" +
+                $"Estado: {estadoProprietario}\n" +
+                $"Cidade: {cidadeProprietario}\n" +
+                $"RG: {rg}\n" +
+                $"CPF: {cpf}\n" +
+                $"Data de Nascimento: {dataNascimento}\n" +
+                $"Sexo: {sexo}", "Consulta");
         }
     }
 }
